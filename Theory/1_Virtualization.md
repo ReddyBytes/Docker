@@ -22,6 +22,7 @@ Types of Hypervisors:
 __Virtual Machine:__
 
 ntg but  an instance created by Hypervisor. 
+![Virtualization](images/Virtualization.png)
 
 __Advantages of Using Virtual Machines:__
 1) __Isolation:__ Each VM operates independently of the others, providing a secure environment for running applications and services.
@@ -36,7 +37,7 @@ __Drawbacks of VMs:__
 2) __Resource Utilization:__ by default when we install VM we will get lof of apps which are not useful and which takes more storage.
 3) __Speed:__ The speed of starting VMs will take lot of time because it needs to load entire OS.
 
-To overcome the limitations of VMs a new technology came into play nothing but DOCKER.to read more information about docker click on [Docker documentation](/Theory/2Docker_Intro.md) 
+To overcome the limitations of VMs a new technology came into play nothing but CONTAINERIZATION.To know more information aboutthis concept click on [Containerization](/Theory/2_Docker_Intro.md) 
 
-
+To know more about Virtualization click [Here](https://www.ibm.com/topics/virtualization)
 
