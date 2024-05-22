@@ -42,43 +42,46 @@ __problem 2)__ we have 2 containers named frontend and backend and there is conn
 
 better go with volumes than mounts 
 
-__How to create volumes ??__
+Creating Volumes
+--
+Create a volume:
+  
+    docker volume create VOLUME_NAME
+This command creates a new volume with the specified name.
 
-1) <span style="color:orange;">docker volume create "volume name"</span>
-   
-   it means that a logical partion is created in in the host (ec2 instance) with name ex: volume = <span style="color:orange;">boss</span>
+- Listing Volumes
 
-2) <span style="color:orange;">docker volume ls</span>
-    
-    it showa the entire volumes present in the host
+List all volumes:
+  
+    docker volume ls
+Lists all volumes available on the system.
 
-3) <span style="color:orange;">docker volume inspect boss</span>
-    
-    it shows entore data of particular volure details date,location etc.
+- Inspecting Volumes
 
-4) <span style="color:orange;">docker volume ls</span>
-    
-    it deletes the volume name called boss
+Inspect a volume:
+  
+    docker volume inspect VOLUME_NAME
+Provides detailed information about the specified volume, such as its location on the host filesystem.
 
-5) <span style="color:orange;">docker run -d -v boss:/app ngnix</span>
-    
-    nginx is the image, /app is the folder present in the container we are mapping this container folder to the volume present in the host
+- Removing Volumes
 
-6) <span style="color:orange;">docker run -d --mount source=boss,target=/app ngnix</span>  
-   we use in mount format also for easy understanding.  
+Remove a volume:
+  
+    docker volume rm VOLUME_NAME
+Removes the specified volume. Note that you cannot remove a volume that is being used by a container.
 
-7) <span style="color:orange;">docker volume rm <volume_name> </span>  
-   Remove a Volume: Deletes a volume.
+- Pruning Volumes
 
-8) <span style="color:orange;">docker volume prune<volume_name> </span>  
-   Prune Volumes: Removes all unused volumes.
-   
-9)  <span style="color:orange;">docker volume rm <volume_name> </span>  
-    
-10) <span style="color:orange;">docker volume rm <volume_name> </span>  
+Prune unused volumes:
+  
+    docker volume prune
+Removes all local volumes not used by at least one container. Be cautious with this command, as it can delete more than you intend if you have many volumes.
 
-11) 
+Create a container with a volume:
+  
+    docker run -v VOLUME_NAME:/path/in/container IMAGE
+Runs a container with a volume attached. Data written to /path/in/container inside the container will be stored in VOLUME_NAME.
 
-     
-
- 
+Mount a volume into a running container:
+  
+    docker run -d --name CONTAINER_NAME -v VOLUME_NAME:/path/in/container IMAGE
