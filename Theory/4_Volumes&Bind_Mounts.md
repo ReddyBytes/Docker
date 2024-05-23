@@ -17,7 +17,7 @@ __problem 2)__ we have 2 containers named frontend and backend and there is conn
 
  ------> we can share these mounts to multiple containers.
 
- <span style="color:green;">docker run -v /host/directory:/container/directory my_image</span>
+> docker run -v /host/directory:/container/directory my_image 
 
  host location : location of the file in container
 
@@ -36,7 +36,7 @@ __problem 2)__ we have 2 containers named frontend and backend and there is conn
 
  ----> we can create volumes not only in Host we can use another ec2 instance or s3 or any cloud storage also.
 
- <span style="color:green;">docker run -v my_volume:/path/in/container my_image</span>
+> docker run -v my_volume:/path/in/container my_image 
 
  ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO_02QnEX4Iusmdk7e8DRhmOjdCKBgU3P1xIduXPW7XQ&s)
 
