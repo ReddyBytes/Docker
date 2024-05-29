@@ -244,3 +244,14 @@ Additionally, you can follow the logs in real-time, similar to tail -f, by appen
 
   
     docker logs -f CONTAINER_ID_OR_NAME
+
+To view the processcess present in the container, run the following command.
+  
+    docker exec container-id ps -eaf 
+
+
+to view the same processess running in the host  we can see diff Process id for same container bcz of namespaces. 
+
+  
+    pd -eaf | grep process-name  
+

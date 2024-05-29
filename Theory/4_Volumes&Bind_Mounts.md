@@ -1,11 +1,11 @@
 
-lets try to understand volumes witha an example .
-lets say we created an nginx container and it stores the user data and all activities in a log file .
+lets try to understand volumes with an example .
+lets say we created an nginx container which stores the user data and all activities in a log file .
 
 
-__problem 1)__ if the container crashes we lost all this data because of container are  ephimeral(less life span) in nature .
+__problem 1)__ if the container crashes we lost all this data because of container are  ephimeral (less life span) in nature .
 
-__problem 2)__ we have 2 containers named frontend and backend and there is connection between them .if any one container is lost then the other is lost the previous data to server to the users which may cause sidcomfort to the usrs.
+__problem 2)__ we have 2 containers named frontend and backend and there is connection between them .if any one container is lost then the other container losts the previous data serves to the users which may cause discomfort to the users.
 
  to overcome this types of data loss when the container losts docker provides 2 solutions 
 

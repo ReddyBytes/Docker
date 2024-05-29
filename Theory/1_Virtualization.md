@@ -8,12 +8,14 @@ Why we need it ??
 
 2. To test our application in multiple environments we create a virtual machine.
 
-**HYPERVISOR:**
+**HYPERVISOR:**  
 It is a software layer that manages the entire Virtualization process.
 Types of Hypervisors:
-1) Baremetal/Type1 Hypervisor : They run directly on hardware without OS.
+1) __Baremetal/Type1 Hypervisor :__  
+        They run directly on hardware without OS.
         Ex: VMware, Sphere, Xen etc.
-2) Hosted / Type2 Hypervisor : They run on the host OS just like an application.
+2) __Hosted / Type2 Hypervisor :__  
+        They run on the host OS just like an application.
         Ex: VirtualBox, VMware Workstation etc
 
 ![ ](images/server_virt-hypervisor_mobile.jpg)
