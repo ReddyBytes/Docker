@@ -52,6 +52,9 @@ __DOCKER REGISRTY:__
 
 To know more about Docker internals refer to the link [official docker documentation](https://docs.docker.com/get-started/overview/)
 
+---
+---
+---
 
 ### Snapshot : 
 
