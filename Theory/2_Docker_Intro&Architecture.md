@@ -10,7 +10,8 @@ __Advantages of containers:__
 
 ![Virtualization vs Containerization](/Theory/images/vm-vs-containers.webp)
 
-To implementing this process we need a software tool that is __DOCKER__.
+To implementing this process we need a software tool that is __DOCKER__.  
+Container Engine are like ContainerD, CRI-O 
 
 ## DOCKER  
 Docker is a platform for developing, shipping and running applications inside containers.
@@ -27,6 +28,10 @@ Docker is a platform for developing, shipping and running applications inside co
 ### Containers  
 - A Docker container is an instance of a Docker image that runs the actual application. 
 -  It is an isolated environment where an application runs without affecting the rest of the system and without the system impacting the application
+- container is a process to check that use 
+  
+    
+      lsns -t pid
 
 ### Dockerfile 
  Is a Script containing a series of instructions to build an image.

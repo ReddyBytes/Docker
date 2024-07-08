@@ -1,34 +1,48 @@
 # DOCKER COMMANDS
-  
-    •	docker --version  
-  Gives docker version
 
+to install the docker using shell script
   
-    •	docker -v
+    curl https://get.docker.com | bash
 
-Gives docker version same as docker --version
+install from [official website](https://docs.docker.com/engine/install/ubuntu/)
   
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    Executing docker install script, commit: 7cae5f8b0decc17d6571f9f52eb840fbc13b2737
+    <...>
+
+Gives docker version  
+    
+      •	docker --version  
+  
+     •	docker -v
+
+Gives details about how many containers running/paused/stopped, images etc. 
+
     •	docker info
-Gives details about how many containers running/paused/stopped, images etc.
-  
-    •	docker --help
+
 Gives the list of docker commands we can run
-  
-    •	docker command --help
+    
+    •	docker --help
+
 Get the help details about the specified command
 
-example: docker get info --help
-  
-    •	docker login
+    •	docker command --help
+    example: docker get info --help
+
 login to docker hub - https://hub.docker.com/
 It will ask for username and password
+
+    •	docker login
+
   
-    
-    •	docker logout
 logout from docker hub
+
+    •	docker logout
+
   
     
-Pulling Images:
+Images:
 --
  Pull an Image: Downloads an image from a registry.
   
@@ -111,6 +125,11 @@ Follow Logs: Streams logs in real-time.
   
     docker logs -f <container_id_or_name>
 
+`apt install jq` is used to view the logs in json format 
+  
+    cd /var/lib/docker/container/<container_id_or_name> 
+    cat <logfile.log> | jq
+
 Port Mapping  
 ==
 Port Forwarding: Maps a network port to a container port.
@@ -156,7 +175,11 @@ Copy files/folders from the container to the host:
  --
 Run a container from the latest Ubuntu image without publishing ports:
   
-    docker run -d --name my_container ubuntu
+    docker run -d --name my_container nginx
+
+to delete the container automatically from the background also when we stop the container  
+  
+    docker run --rm --name my_container nginx
 Run a container from the latest Nginx image, bind mount a volume, and publish port 80:
   
     docker run -d -v /path/to/local/dir:/usr/share/nginx/html -p 8080:80 --name nginx_container nginx
@@ -187,6 +210,8 @@ To stop a running container, use the docker stop command.
 
   
     docker stop CONTAINER_ID_OR_NAME
+
+    docker stop $(docker ps -aq)
 
 Remove a Container
 To remove one or more containers, use the docker rm command.
@@ -252,6 +277,27 @@ To view the processcess present in the container, run the following command.
 
 to view the same processess running in the host  we can see diff Process id for same container bcz of namespaces. 
 
+    ps -ef
+
+    pd -eaf | grep process-name 
+
+    lsns   # to list the namespaces
+    
+    lsns -t pid    # to list the pid
+
+    watch lsns -t pid   # to watch the pids 
+
+
+script to run multiple containers
   
-    pd -eaf | grep process-name  
+    for I in {1..10}; do
+    > docker run -d nginx
+    > done
+
+to set alias for docker commands use 
+  
+    nano .bashrc
+
+    source .bashrc
+
 

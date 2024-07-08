@@ -9,7 +9,9 @@ Why we need it ??
 2. To test our application in multiple environments we create a virtual machine.
 
 **HYPERVISOR:**  
-It is a software layer that manages the entire Virtualization process.
+- It is a software layer that manages the entire Virtualization process.
+- It is the core component that if guest OS needs any hardware resource then Hypervisor sends this request to hardware and vice versa.
+
 Types of Hypervisors:
 1) __Baremetal/Type1 Hypervisor :__  
         They run directly on hardware without OS.
@@ -39,7 +41,7 @@ __Drawbacks of VMs:__
 2) __Resource Utilization:__ by default when we install VM we will get lof of apps which are not useful and which takes more storage.
 3) __Speed:__ The speed of starting VMs will take lot of time because it needs to load entire OS.
 
-To overcome the limitations of VMs a new technology came into play nothing but CONTAINERIZATION.To know more information aboutthis concept click on [Containerization](/Theory/2_Docker_Intro.md) 
+To overcome the limitations of VMs a new technology came into play nothing but CONTAINERIZATION.To know more information aboutthis concept click on [Containerization](/Theory/2_Docker_Intro&Architecture.md) 
 
 To know more about Virtualization click [Here](https://www.ibm.com/topics/virtualization)
 
