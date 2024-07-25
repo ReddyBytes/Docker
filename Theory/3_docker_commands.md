@@ -68,7 +68,8 @@ List Remote Images: Lists images available in a remote registry.
 
 Build an Image: Constructs an image from a Dockerfile.
   
-    docker build -t <image_name>:<tag>.
+    docker build -t <image_name>:<tag> .
+    docker build -t <image_name>:<tag> -f <dockerfile name> . --no-cache
 Build with BuildKit: Uses BuildKit backend for building images.
   
     DOCKER_BUILDKIT=1 docker build -t <image_name>:<tag>.

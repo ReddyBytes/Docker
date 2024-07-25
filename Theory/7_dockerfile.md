@@ -1,3 +1,10 @@
+### Dockerfile 
+ Is a Script containing a series of instructions to build an image.
+for every line present in the dockerfile if forms a layer in the image.
+
+For the references or future versions  we keep these images in a safe place called __DOCKERHUB__ where we can push and pull the images with different versions
+
+![](/Theory/images/dockerfile-2.png)
 
 __Dockerfile commands:__
 
@@ -23,7 +30,9 @@ __Dockerfile commands:__
         
         ADD file.tar.gz
 
-6) __ENV__ is used to set the environment variables 
+6) __ENV__ is used to set the environment variables  
+this env variables can pass while running the containers
+
         
         ENV PORT 5000
 
@@ -44,6 +53,20 @@ __Dockerfile commands:__
         
         VOLUME [/path/to/file/in/container]
 
+11) __LABEL__ is used to give the key value pair 
+  
+    
+      
+        LABEL key="test_image"
+
+12) __ARG__ are the build args  
+this args can be pass while building the images
+  
+    
+      
+        ARG P_VERSION=3.10
+
+        docker build -t <imagename with tag> --build-arg P_VERSION=3.10 -f <dockerfile> .
 
 These are the top dockerfile commands that we use daily to learn all docker file command [click](https://docs.docker.com/reference/dockerfile/)
 see the sample docker [dockerfile](/code/Dockerfile)

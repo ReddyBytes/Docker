@@ -17,29 +17,30 @@ Container Engine are like ContainerD, CRI-O
 Docker is a platform for developing, shipping and running applications inside containers.
 
 ### Docker Image:  
- - An image is an immutable, lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, environment variables, and config files.  
- - It serves as a blueprint for creating containers. 
- - Images are stored in a Docker registry and are composed of layers, which makes them efficient to transfer and version control. 
- - IMAGES are read-only templates.  
-   
+- An image is an immutable, lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, environment variables, and config files.  
+- It serves as a blueprint for creating containers. 
+- Images are stored in a Docker registry and are composed of layers, which makes them efficient to transfer and version control. 
+- IMAGES are read-only templates.  
+
 - __"Lightweight"__ Containers share the machine's OS system kernel and therefore do not require an OS per application  
-- __"Standalone"__ refers to something that exists or operates independently, without needing to connect to or be part of another entity or system.
-  
+- __"Standalone"__ refers to something that exists or operates independently, without needing to connect to or be part of another entity or system.  
+
+#### Dangling Images
+- These are the images that does not have any interaction with tagged images.
+- this images have no tag and name
+for more info [check this page](https://www.howtogeek.com/devops/what-are-dangling-docker-images/)
+
+#### Distroless Images
+- These are the minimalistic images which doesn't have the shell (bash),packager managers etc.
+- This images contains only the application and runtime dependencies.
 ### Containers  
 - A Docker container is an instance of a Docker image that runs the actual application. 
 -  It is an isolated environment where an application runs without affecting the rest of the system and without the system impacting the application
-- container is a process to check that use 
-  
-    
+- container is a process to check that use  
+      
       lsns -t pid
+- containers are stateless means they do not store data between two sessions or on restarts
 
-### Dockerfile 
- Is a Script containing a series of instructions to build an image.
-for every line present in the dockerfile if forms a layer in the image.
-
-For the references or future versions  we keep these images in a safe place called __DOCKERHUB__ where we can push and pull the images with different versions
-
-![](/Theory/images/dockerfile-2.png)
 
 **DOCKER ARCHITECTURE** 
 

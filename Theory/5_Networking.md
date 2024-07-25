@@ -65,6 +65,9 @@ Create a Custom Network: Creates a custom network for inter-container communicat
 Connect Containers to a Network: Connects containers to a specified network.
   
     docker network connect <network_name> <container_id_or_name>
+
+    docker network connet custom app1       # now we can ping the app1 with the containers present in the custom network
+
 Disconnect Containers from a Network: Disconnects containers from a specified network.
   
     docker network disconnect <network_name> <container_id_or_name>
