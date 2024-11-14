@@ -5,7 +5,7 @@ __container__ is an isolated env to run an application.
 
 __Advantages of containers:__
 1) independent on OS
-2) lightweight bcz they don't have complete OS it shares the Kernal
+2) lightweight bcz they don't have complete OS it shares the Kernaľ̌
 3) faster
 
 ![Virtualization vs Containerization](/Theory/images/vm-vs-containers.webp)
@@ -14,7 +14,17 @@ To implementing this process we need a software tool that is __DOCKER__.
 Container Engine are like ContainerD, CRI-O 
 
 ## DOCKER  
-Docker is a platform for developing, shipping and running applications inside containers.
+Docker is a platform for developing, shipping and running applications inside containers. It seperates the application and infra so that we can test anywhere with all dependencies.
+
+Main advantages:
+
+1. __Portability :__ we can ship our application wherever we want
+
+2. __Consistency :__ Irrespective of infra we will get the same output
+
+3. __Isolation :__ seperation is there b/w infra and aplication
+
+4. __Efficiency :__ we can work more efficient because there is no need of having the same dependencies in all systwms , dev, qa, prd. 
 
 ### Docker Image:  
 - An image is an immutable, lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, environment variables, and config files.  
